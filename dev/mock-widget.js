@@ -49,19 +49,42 @@
         console.info.apply(console, args);
     }
 
-    /** Calls the page's handlers; true when there was one (the real widget then does nothing more). */
+    /** Calls the page's handlers and returns what they returned (none: the real widget acts itself). */
     function emit(event, payload) {
         var list = (handlers[event] || []).slice();
+        var results = [];
 
         list.forEach(function (handler) {
             try {
-                handler(payload);
+                results.push(handler(payload));
             } catch (e) {
                 console.error('[AskMerra mock] handler error', e);
+                results.push(false);
             }
         });
 
-        return list.length > 0;
+        return results;
+    }
+
+    /**
+     * As the real widget: the add_to_cart handlers confirmed the product is in the cart when one
+     * returned true or a promise of true; a handler that never settles counts as unconfirmed after 10 s.
+     */
+    function confirmedByHandlers(results) {
+        var settled = Promise.all(results.map(function (result) {
+            return Promise.resolve(result)['catch'](function () {
+                return false;
+            });
+        }));
+        var timeout = new Promise(function (resolve) {
+            setTimeout(function () {
+                resolve([]);
+            }, 10000);
+        });
+
+        return Promise.race([settled, timeout]).then(function (values) {
+            return values.indexOf(true) !== -1;
+        });
     }
 
     /** As the real widget: an explicit setConsent wins; without any signal nothing is sent. */
@@ -294,7 +317,7 @@
                     onclick: function (event) {
                         log('product_click', card);
 
-                        if (emit('product_click', card)) {
+                        if (emit('product_click', card).length) {
                             event.preventDefault();
                         }
                     }
@@ -302,13 +325,35 @@
                 element('small', {}, [' #' + product.externalId + ' (' + product.type + ')']),
                 element('button', {
                     type: 'button',
-                    onclick: function () {
-                        log('add_to_cart', card);
+                    onclick: function (event) {
+                        var button = event.currentTarget;
+                        var results;
 
-                        // As the real widget: the shop's handler, else the product page.
-                        if (!emit('add_to_cart', card) && card.url) {
-                            window.location.href = card.url;
+                        log('add_to_cart', card);
+                        results = emit('add_to_cart', card);
+
+                        // As the real widget: the shop's handlers, else the product page.
+                        if (!results.length) {
+                            if (card.url) {
+                                window.location.href = card.url;
+                            }
+
+                            return;
                         }
+
+                        // "Added" for two seconds once a handler confirms the product is in the cart.
+                        button.disabled = true;
+                        confirmedByHandlers(results).then(function (added) {
+                            log('add_to_cart confirmed', added);
+                            button.disabled = false;
+                            button.textContent = added ? 'Added' : 'Add to cart';
+
+                            if (added) {
+                                setTimeout(function () {
+                                    button.textContent = 'Add to cart';
+                                }, 2000);
+                            }
+                        });
                     }
                 }, ['Add to cart'])
             ]));

@@ -7,7 +7,7 @@ Requires PHP: 8.1
 Requires Plugins: woocommerce
 WC requires at least: 8.0
 WC tested up to: 11.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,6 +59,9 @@ Check that a site key is set, that your domain is allowed in the AskMerra dashbo
 Turn AskMerra off, then use "Remove its products from AskMerra" on the status page or `wp askmerra remove`. Delete feed sources in the AskMerra dashboard too.
 
 == Changelog ==
+
+= 1.0.2 =
+* The chat's "Add to cart" button shows that the product was added.
 
 = 1.0.1 =
 * The askmerra:cart-added event's detail carries cartQty (the items in the cart after the add) instead of the misleading qty.

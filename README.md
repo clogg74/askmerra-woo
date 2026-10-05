@@ -251,6 +251,8 @@ unless asked for; other checkout pages can be marked with the `askmerra_is_check
     (`wc-blocks_added_to_cart`).
   - `document` receives an `askmerra:cart-added` event for themes that open a cart drawer, with
     `detail: {externalId, sku, name, cartQty}` (`cartQty`: the items in the cart after the add).
+  - The handler resolves `true` once the product is in the cart, so the chat's button shows it was
+    added.
 - **Orders** - on the order received page the order is passed to `AskMerra.trackPurchase()` once.
   AskMerra sends it once the shopper's analytics consent allows it.
 - **Consent** - *WP Consent API* mode reads the `statistics` category from consent plugins that
@@ -284,7 +286,8 @@ Load `script_url` with the attributes `data-site-key`, `data-locale`, `data-posi
 and `data-api-url`, as in the AskMerra snippet. Then:
 - on product pages, set `window.AskMerraSettings.productId` (the product ID, or its SKU when
   `product_identifier` is `sku`), or call `AskMerra.setProduct(id)` after client-side navigation;
-- handle the widget's `add_to_cart` event with your cart;
+- handle the widget's `add_to_cart` event with your cart, and return `true` (or a promise of `true`)
+  once the product is in it - the chat's button then shows it was added;
 - on the order confirmation, call `AskMerra.trackPurchase({transaction_id, value, currency, items})`.
 
 ## Developers

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.2 - 2026-10-06
+
+- The chat's "Add to cart" button shows that the product was added: the add_to_cart handler
+  resolves `true` once the product is in the cart (`false` when it opens the product page or the
+  cart refuses it).
+- The development stand-in widget (`dev/mock-widget.js`) shows "Added" like the real widget.
+
 ## 1.0.1 - 2026-10-05
 
 - The `askmerra:cart-added` event's detail carries `cartQty` (the items in the cart after the add)
