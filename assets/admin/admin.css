@@ -1,0 +1,69 @@
+/* AskMerra for WooCommerce - admin screens. */
+
+.askmerra-test-result {
+    margin-top: 10px;
+    max-width: 760px;
+}
+
+.askmerra-test-result .notice {
+    margin: 0 0 6px;
+}
+
+.askmerra-feed-url {
+    margin-bottom: 12px;
+}
+
+.askmerra-feed-url input[readonly],
+.askmerra-status-table input[readonly] {
+    max-width: 640px;
+}
+
+.askmerra-status .askmerra-storefront {
+    margin: 24px 0 32px;
+}
+
+.askmerra-status h2 .askmerra-heading-link {
+    font-size: 13px;
+    font-weight: normal;
+    margin-left: 12px;
+}
+
+.askmerra-status-table,
+.askmerra-errors {
+    max-width: 1100px;
+}
+
+.askmerra-status-table th {
+    width: 220px;
+}
+
+.askmerra-actions {
+    margin-top: 12px;
+}
+
+.askmerra-action {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+}
+
+.askmerra-problem .askmerra-action {
+    margin-bottom: 10px;
+}
+
+.askmerra-json {
+    max-height: 600px;
+    overflow: auto;
+    padding: 12px;
+    background: #f6f7f7;
+    border: 1px solid #dcdcde;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.inline-edit-row .askmerra-quick-edit {
+    margin-top: 6px;
+}
+
+.askmerra-warning {
+    color: #b32d2e;
+}

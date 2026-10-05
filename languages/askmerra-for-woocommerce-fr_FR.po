@@ -1,0 +1,1420 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AskMerra for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/askmerra-for-woocommerce\n"
+"Last-Translator: AskMerra\n"
+"Language-Team: French (France)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-05T15:42:25+00:00\n"
+"PO-Revision-Date: 2026-10-05 15:58+0000\n"
+"Language: fr_FR\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: askmerra-for-woocommerce\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. Plugin Name of the plugin
+#: askmerra-for-woocommerce.php
+msgid "AskMerra for WooCommerce"
+msgstr "AskMerra for WooCommerce"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: askmerra-for-woocommerce.php
+msgid "https://askmerra.com"
+msgstr "https://askmerra.com"
+
+#. Description of the plugin
+#: askmerra-for-woocommerce.php
+msgid "The AskMerra AI shopping assistant for WooCommerce: catalog sync through the Push API or a product feed, the chat widget, add to cart from the chat and sales attribution."
+msgstr "L’assistant d’achat IA AskMerra pour WooCommerce : synchronisation du catalogue via la Push API ou un flux de produits, widget de chat, ajout au panier depuis le chat et attribution des ventes."
+
+#. Author of the plugin
+#: askmerra-for-woocommerce.php
+#: includes/Admin/ProductFields.php:84
+#: includes/Admin/SettingsPage.php:43
+#: includes/Admin/StatusPage.php:58
+msgid "AskMerra"
+msgstr "AskMerra"
+
+#: askmerra-for-woocommerce.php:62
+msgid "AskMerra for WooCommerce needs WooCommerce to be installed and active."
+msgstr "AskMerra for WooCommerce nécessite que WooCommerce soit installé et activé."
+
+#: includes/Admin/Assets.php:43
+msgid "Checking..."
+msgstr "Vérification..."
+
+#: includes/Admin/Assets.php:44
+msgid "The check could not run. Reload the page and try again."
+msgstr "La vérification n’a pas pu s’exécuter. Rechargez la page et réessayez."
+
+#: includes/Admin/Assets.php:45
+msgid "Copied"
+msgstr "Copié"
+
+#: includes/Admin/BulkActions.php:36
+msgid "Send to AskMerra now"
+msgstr "Envoyer à AskMerra maintenant"
+
+#: includes/Admin/BulkActions.php:54
+msgid "AskMerra does not sync the catalog yet. Check its settings."
+msgstr "AskMerra ne synchronise pas encore le catalogue. Vérifiez ses réglages."
+
+#. translators: %d: number of products
+#: includes/Admin/BulkActions.php:66
+#, php-format
+msgid "%d product was queued for AskMerra; it is sent within a minute (only if its content changed)."
+msgid_plural "%d products were queued for AskMerra; they are sent within a minute (only those whose content changed)."
+msgstr[0] "%d produit a été mis en file d’attente pour AskMerra ; il est envoyé dans la minute (uniquement si son contenu a changé)."
+msgstr[1] "%d produits ont été mis en file d’attente pour AskMerra ; ils sont envoyés dans la minute (uniquement ceux dont le contenu a changé)."
+
+#: includes/Admin/ConnectionTest.php:40
+msgid "You are not allowed to change the AskMerra settings."
+msgstr "Vous n’avez pas l’autorisation de modifier les réglages d’AskMerra."
+
+#: includes/Admin/ConnectionTest.php:57
+msgid "The API URL must start with https://."
+msgstr "L’URL de l’API doit commencer par https://."
+
+#: includes/Admin/ConnectionTest.php:70
+msgid "No secret key: not needed with a product feed - AskMerra downloads the feed URL shown under Sync & feed."
+msgstr "Aucune clé secrète : inutile avec un flux de produits - AskMerra télécharge l’URL du flux affichée dans la section Synchronisation et flux."
+
+#: includes/Admin/ConnectionTest.php:71
+msgid "Enter the secret key (sk_live_...) from your AskMerra dashboard, API keys."
+msgstr "Saisissez la clé secrète (sk_live_...) provenant de votre tableau de bord AskMerra (Clés API)."
+
+#: includes/Admin/ConnectionTest.php:73
+msgid "The secret key field holds the site key (pk_...). The secret key starts with sk_live_."
+msgstr "Le champ de la clé secrète contient la clé de site (pk_...). La clé secrète commence par sk_live_."
+
+#: includes/Admin/ConnectionTest.php:79
+msgid "No site key: the chat widget will not show on the storefront."
+msgstr "Aucune clé de site : le widget de chat ne s’affichera pas en vitrine."
+
+#: includes/Admin/ConnectionTest.php:81
+msgid "The site key field holds the secret key - remove it from there at once: the site key is public. The site key starts with pk_live_."
+msgstr "Le champ de la clé de site contient la clé secrète - retirez-la immédiatement de ce champ : la clé de site est publique. La clé de site commence par pk_live_."
+
+#: includes/Admin/ConnectionTest.php:83
+msgid "The site key usually starts with pk_live_. Check that it was copied whole."
+msgstr "La clé de site commence généralement par pk_live_. Vérifiez qu’elle a été copiée en entier."
+
+#. translators: %s: the shop's domain, e.g. shop.example.com
+#: includes/Admin/ConnectionTest.php:87
+#, php-format
+msgid "Site key set. In the AskMerra dashboard, allow the domain %s for the widget (Install, Allowed domains), or the chat stays hidden."
+msgstr "Clé de site définie. Dans le tableau de bord AskMerra, autorisez le domaine %s pour le widget (Installation, Domaines autorisés), sinon le chat reste masqué."
+
+#. translators: %s: the feed URL
+#: includes/Admin/ConnectionTest.php:96
+#, php-format
+msgid "Feed URL for AskMerra (Catalog, Add source, Feed URL): %s"
+msgstr "URL du flux pour AskMerra (Catalogue, Ajouter une source, URL du flux) : %s"
+
+#. translators: %s: AskMerra's error code
+#: includes/Admin/ConnectionTest.php:114
+#, php-format
+msgid "AskMerra refused the secret key (%s). Check that it is copied whole, not revoked, and that the AskMerra shop is active."
+msgstr "AskMerra a refusé la clé secrète (%s). Vérifiez qu’elle a été copiée en entier, qu’elle n’a pas été révoquée et que la boutique AskMerra est active."
+
+#. translators: %s: the AskMerra shop name
+#: includes/Admin/ConnectionTest.php:133
+#, php-format
+msgid "Connected to the AskMerra shop \"%s\"."
+msgstr "Connecté à la boutique AskMerra « %s »."
+
+#: includes/Admin/ConnectionTest.php:136
+msgid "Save the settings to start using this key."
+msgstr "Enregistrez les réglages pour commencer à utiliser cette clé."
+
+#: includes/Admin/Format.php:14
+#: includes/Admin/StatusPage.php:690
+msgid "never"
+msgstr "jamais"
+
+#. translators: %s: storefront names
+#: includes/Admin/Notices.php:92
+#, php-format
+msgid "AskMerra does not accept the catalog of %s: the secret key was refused or the AskMerra shop is suspended. Changes are kept and sent once fixed."
+msgstr "AskMerra n’accepte pas le catalogue de %s : la clé secrète a été refusée ou la boutique AskMerra est suspendue. Les modifications sont conservées et envoyées dès que le problème est résolu."
+
+#: includes/Admin/Notices.php:96
+msgid "See the sync status"
+msgstr "Voir l’état de la synchronisation"
+
+#: includes/Admin/Notices.php:113
+msgid "AskMerra is installed."
+msgstr "AskMerra est installé."
+
+#: includes/Admin/Notices.php:114
+msgid "Connect it to your AskMerra shop with the keys from the AskMerra dashboard (API keys): the assistant then learns your catalog and appears on the storefront."
+msgstr "Connectez-le à votre boutique AskMerra avec les clés du tableau de bord AskMerra (Clés API) : l’assistant apprend alors à connaître votre catalogue et s’affiche en vitrine."
+
+#: includes/Admin/Notices.php:116
+msgid "Connect AskMerra"
+msgstr "Connecter AskMerra"
+
+#: includes/Admin/Notices.php:118
+msgid "Dismiss"
+msgstr "Ignorer"
+
+#: includes/Admin/PluginLinks.php:23
+#: includes/Admin/StatusPage.php:101
+#: includes/Admin/StatusPage.php:380
+msgid "Settings"
+msgstr "Réglages"
+
+#: includes/Admin/PluginLinks.php:24
+#: includes/Admin/SettingsPage.php:332
+msgid "Sync status"
+msgstr "État de la synchronisation"
+
+#: includes/Admin/ProductFields.php:47
+#: includes/Admin/ProductFields.php:67
+#: includes/Admin/ProductFields.php:88
+msgid "Hide from AskMerra"
+msgstr "Masquer dans AskMerra"
+
+#: includes/Admin/ProductFields.php:48
+msgid "The AI shopping assistant will not know or recommend this product."
+msgstr "L’assistant d’achat IA ne connaîtra pas ce produit et ne le recommandera pas."
+
+#: includes/Admin/ProductFields.php:87
+msgid "— No change —"
+msgstr "— Aucun changement —"
+
+#: includes/Admin/ProductFields.php:89
+msgid "Show in AskMerra"
+msgstr "Afficher dans AskMerra"
+
+#: includes/Admin/ProductFields.php:129
+msgid "AskMerra: all products"
+msgstr "AskMerra : tous les produits"
+
+#: includes/Admin/ProductFields.php:130
+msgid "Hidden from AskMerra"
+msgstr "Masqués dans AskMerra"
+
+#: includes/Admin/SettingsFields.php:80
+msgid "A key is saved but can no longer be read (the site security keys changed): enter it again"
+msgstr "Une clé est enregistrée mais ne peut plus être lue (les clés de sécurité du site ont changé) : saisissez-la à nouveau"
+
+#. translators: %s: the start of the saved key, e.g. sk_live_
+#: includes/Admin/SettingsFields.php:83
+#, php-format
+msgid "Saved (%s…) - type a new key to replace it"
+msgstr "Enregistrée (%s…) - saisissez une nouvelle clé pour la remplacer"
+
+#: includes/Admin/SettingsFields.php:107
+msgid "Remove the saved key"
+msgstr "Supprimer la clé enregistrée"
+
+#: includes/Admin/SettingsFields.php:123
+#: includes/Admin/SettingsPage.php:147
+msgid "Check connection"
+msgstr "Vérifier la connexion"
+
+#: includes/Admin/SettingsFields.php:125
+msgid "Checks the keys as typed, before saving."
+msgstr "Vérifie les clés telles que saisies, avant l’enregistrement."
+
+#: includes/Admin/SettingsFields.php:137
+msgid "Nothing is sent yet: enable AskMerra (Connection) and enter the secret key, or choose the product feed."
+msgstr "Rien n’est encore envoyé : activez AskMerra (Connexion) et saisissez la clé secrète, ou choisissez le flux de produits."
+
+#. translators: 1: products in AskMerra, 2: products waiting, 3: products that failed
+#: includes/Admin/SettingsFields.php:151
+#, php-format
+msgid "%1$d products sent, %2$d waiting, %3$d failed."
+msgstr "%1$d produits envoyés, %2$d en attente, %3$d en échec."
+
+#: includes/Admin/SettingsFields.php:153
+msgid "The sync status could not be read."
+msgstr "Impossible de lire l’état de la synchronisation."
+
+#: includes/Admin/SettingsFields.php:162
+msgid "Open the sync status: errors, full rebuild, product preview"
+msgstr "Ouvrir l’état de la synchronisation : erreurs, reconstruction complète, aperçu d’un produit"
+
+#: includes/Admin/SettingsFields.php:178
+msgid "The catalog is not sent as a feed yet. Choose \"Product feed\" above and save: the feed URL appears here."
+msgstr "Le catalogue n’est pas encore envoyé sous forme de flux. Choisissez « Flux de produits » ci-dessus et enregistrez : l’URL du flux apparaît ici."
+
+#: includes/Admin/SettingsFields.php:187
+#: includes/Admin/StatusPage.php:705
+msgid "Copy"
+msgstr "Copier"
+
+#: includes/Admin/SettingsFields.php:192
+msgid "In the AskMerra dashboard: Catalog, Add source, Feed URL. The URL holds a secret part - share it only with AskMerra."
+msgstr "Dans le tableau de bord AskMerra : Catalogue, Ajouter une source, URL du flux. L’URL contient une partie secrète - ne la partagez qu’avec AskMerra."
+
+#: includes/Admin/SettingsFields.php:193
+msgid "Write it now or change the secret part on the sync status page."
+msgstr "Générez le flux maintenant ou modifiez la partie secrète sur la page d’état de la synchronisation."
+
+#: includes/Admin/SettingsFields.php:215
+msgid "The secret key field held the site key (pk_...): it was not saved. The secret key starts with sk_live_."
+msgstr "Le champ de la clé secrète contenait la clé de site (pk_...) : elle n’a pas été enregistrée. La clé secrète commence par sk_live_."
+
+#: includes/Admin/SettingsFields.php:221
+msgid "The secret key was not saved: it starts with sk_live_ and has only letters and digits. Copy it again from the AskMerra dashboard (API keys)."
+msgstr "La clé secrète n’a pas été enregistrée : elle commence par sk_live_ et ne contient que des lettres et des chiffres. Copiez-la à nouveau depuis le tableau de bord AskMerra (Clés API)."
+
+#: includes/Admin/SettingsFields.php:239
+msgid "The site key field held the secret key: it was not saved there. The site key is public and starts with pk_live_; keep the secret key only in the \"Secret key\" field."
+msgstr "Le champ de la clé de site contenait la clé secrète : elle n’y a pas été enregistrée. La clé de site est publique et commence par pk_live_ ; saisissez la clé secrète uniquement dans le champ « Clé secrète »."
+
+#. translators: %s: a settings field label, e.g. Product types
+#: includes/Admin/SettingsFields.php:260
+#, php-format
+msgid "%s: choose at least one. The previous choice was kept."
+msgstr "%s : sélectionnez au moins une option. Le choix précédent a été conservé."
+
+#. translators: %s: a settings field label
+#: includes/Admin/SettingsFields.php:294
+#, php-format
+msgid "%s: enter a time such as 03:15. The previous value was kept."
+msgstr "%s : saisissez une heure telle que 03:15. La valeur précédente a été conservée."
+
+#. translators: %s: a settings field label
+#: includes/Admin/SettingsFields.php:314
+#, php-format
+msgid "%s: enter a full address starting with https://. The previous value was kept."
+msgstr "%s : saisissez une adresse complète commençant par https://. La valeur précédente a été conservée."
+
+#: includes/Admin/SettingsFields.php:342
+msgid "The feed could not be read."
+msgstr "Impossible de lire le flux."
+
+#. translators: 1: date and time, 2: size in KB
+#: includes/Admin/SettingsFields.php:348
+#, php-format
+msgid "Published %1$s (%2$s KB)."
+msgstr "Publié le %1$s (%2$s Ko)."
+
+#: includes/Admin/SettingsFields.php:361
+#: includes/Admin/StatusPage.php:735
+msgid "Not written yet: it is written at the next scheduled run."
+msgstr "Pas encore généré : il le sera lors de la prochaine exécution planifiée."
+
+#. translators: 1: a settings field label, 2: lowest value, 3: highest value
+#: includes/Admin/SettingsFields.php:377
+#, php-format
+msgid "%1$s: enter a whole number from %2$d to %3$d. The previous value was kept."
+msgstr "%1$s : saisissez un nombre entier de %2$d à %3$d. La valeur précédente a été conservée."
+
+#: includes/Admin/SettingsPage.php:80
+msgid "AskMerra: the catalog is being rebuilt; only products whose content changed are sent. Follow it under WooCommerce > AskMerra."
+msgstr "AskMerra : le catalogue est en cours de reconstruction ; seuls les produits dont le contenu a changé sont envoyés. Suivez l’avancement dans WooCommerce > AskMerra."
+
+#: includes/Admin/SettingsPage.php:81
+msgid "AskMerra: the first sync of the catalog starts in the background. Follow it under WooCommerce > AskMerra."
+msgstr "AskMerra : la première synchronisation du catalogue démarre en arrière-plan. Suivez l’avancement dans WooCommerce > AskMerra."
+
+#: includes/Admin/SettingsPage.php:92
+#: includes/Admin/SettingsPage.php:104
+msgid "Connection"
+msgstr "Connexion"
+
+#: includes/Admin/SettingsPage.php:93
+#: includes/Admin/SettingsPage.php:162
+msgid "Catalog"
+msgstr "Catalogue"
+
+#: includes/Admin/SettingsPage.php:94
+msgid "Sync & feed"
+msgstr "Synchronisation et flux"
+
+#: includes/Admin/SettingsPage.php:95
+#: includes/Admin/SettingsPage.php:384
+msgid "Storefront widget"
+msgstr "Widget en vitrine"
+
+#: includes/Admin/SettingsPage.php:96
+#: includes/Admin/SettingsPage.php:493
+msgid "Advanced"
+msgstr "Avancé"
+
+#. translators: %s: the store currency code, e.g. EUR
+#: includes/Admin/SettingsPage.php:109
+#, php-format
+msgid "Create the keys in your AskMerra dashboard, under <strong>API keys</strong>. One AskMerra shop has one currency: connect this store to an AskMerra shop in %s."
+msgstr "Créez les clés dans votre tableau de bord AskMerra, sous <strong>Clés API</strong>. Une boutique AskMerra n’a qu’une seule devise : connectez cette boutique à une boutique AskMerra en %s."
+
+#: includes/Admin/SettingsPage.php:114
+msgid "Enable AskMerra"
+msgstr "Activer AskMerra"
+
+#: includes/Admin/SettingsPage.php:115
+msgid "Send the catalog to AskMerra and show the chat on the storefront"
+msgstr "Envoyer le catalogue à AskMerra et afficher le chat en vitrine"
+
+#: includes/Admin/SettingsPage.php:121
+msgid "Secret key"
+msgstr "Clé secrète"
+
+#: includes/Admin/SettingsPage.php:122
+msgid "Starts with <code>sk_live_</code>. Used only by the server to send your catalog; it is stored encrypted and never reaches the storefront."
+msgstr "Commence par <code>sk_live_</code>. Utilisée uniquement par le serveur pour envoyer votre catalogue ; elle est stockée chiffrée et n’atteint jamais la vitrine."
+
+#: includes/Admin/SettingsPage.php:128
+msgid "Site key"
+msgstr "Clé de site"
+
+#: includes/Admin/SettingsPage.php:129
+msgid "Starts with <code>pk_live_</code>. The public key of the chat widget. Add this store's domain to the allowed domains of your AskMerra shop."
+msgstr "Commence par <code>pk_live_</code>. La clé publique du widget de chat. Ajoutez le domaine de cette boutique aux domaines autorisés de votre boutique AskMerra."
+
+#: includes/Admin/SettingsPage.php:138
+msgid "Language"
+msgstr "Langue"
+
+#: includes/Admin/SettingsPage.php:139
+msgid "The language the products are sent in and the assistant answers in. Automatic uses the site language (Settings > General) when AskMerra supports it."
+msgstr "La langue dans laquelle les produits sont envoyés et dans laquelle l’assistant répond. Automatique utilise la langue du site (Réglages > Général) lorsqu’AskMerra la prend en charge."
+
+#: includes/Admin/SettingsPage.php:165
+msgid "What AskMerra learns about your products. Saving changes here sends the whole catalog again (still only the products whose content changed). <strong>Note:</strong> AskMerra re-reads a product with AI (billed as usage) when its name, description, categories, brand or attributes change - pick attributes that describe the product, not ones that change every day."
+msgstr "Ce qu’AskMerra apprend sur vos produits. Enregistrer des modifications ici renvoie l’intégralité du catalogue (toujours uniquement les produits dont le contenu a changé). <strong>Remarque :</strong> AskMerra relit un produit avec l’IA (facturation à l’usage) lorsque son nom, sa description, ses catégories, sa marque ou ses attributs changent - choisissez des attributs qui décrivent le produit, pas des attributs qui changent tous les jours."
+
+#: includes/Admin/SettingsPage.php:169
+msgid "Product identifier"
+msgstr "Identifiant du produit"
+
+#: includes/Admin/SettingsPage.php:175
+msgid "Product ID (recommended)"
+msgstr "ID du produit (recommandé)"
+
+#: includes/Admin/SettingsPage.php:176
+msgid "SKU"
+msgstr "UGS"
+
+#: includes/Admin/SettingsPage.php:180
+msgid "Product attributes to include"
+msgstr "Attributs produit à inclure"
+
+#: includes/Admin/SettingsPage.php:181
+msgid "The details the assistant can use to answer and filter: e.g. skin type, ingredients, colour, size, material. Sent with their labels. Avoid stock, prices and dates - they are sent separately."
+msgstr "Les détails que l’assistant peut utiliser pour répondre et filtrer : p. ex. type de peau, ingrédients, couleur, taille, matière. Envoyés avec leurs libellés. Évitez le stock, les prix et les dates - ils sont envoyés séparément."
+
+#: includes/Admin/SettingsPage.php:188
+msgid "No attributes"
+msgstr "Aucun attribut"
+
+#: includes/Admin/SettingsPage.php:191
+msgid "Brand"
+msgstr "Marque"
+
+#: includes/Admin/SettingsPage.php:192
+msgid "Sent as the product's brand: WooCommerce Brands, a brand plugin's brands or a product attribute."
+msgstr "Envoyée comme marque du produit : les marques WooCommerce, celles d’une extension de marques ou un attribut de produit."
+
+#: includes/Admin/SettingsPage.php:197
+msgid "-- No brand --"
+msgstr "-- Aucune marque --"
+
+#: includes/Admin/SettingsPage.php:200
+#: includes/Admin/SettingsPage.php:206
+msgid "Description"
+msgstr "Description"
+
+#: includes/Admin/SettingsPage.php:201
+msgid "Sent as plain text (HTML, shortcodes and page builder markup are removed), up to 20,000 characters."
+msgstr "Envoyée en texte brut (le HTML, les codes courts et le balisage des constructeurs de pages sont supprimés), jusqu’à 20 000 caractères."
+
+#: includes/Admin/SettingsPage.php:207
+msgid "Short description"
+msgstr "Description courte"
+
+#: includes/Admin/SettingsPage.php:208
+msgid "Short description, then description"
+msgstr "Description courte, puis description"
+
+#: includes/Admin/SettingsPage.php:212
+msgid "Include variant options"
+msgstr "Inclure les options des variantes"
+
+#: includes/Admin/SettingsPage.php:213
+msgid "Send the options of variable products"
+msgstr "Envoyer les options des produits variables"
+
+#: includes/Admin/SettingsPage.php:214
+msgid "The sizes, colours... a shopper can choose are sent as attributes of the product. The product itself is sent once, not once per variation."
+msgstr "Les tailles, couleurs... qu’un client peut choisir sont envoyées comme attributs du produit. Le produit lui-même est envoyé une seule fois, et non une fois par variation."
+
+#: includes/Admin/SettingsPage.php:220
+msgid "Images per product"
+msgstr "Images par produit"
+
+#: includes/Admin/SettingsPage.php:221
+msgid "The main image comes first, then the gallery; the chat shows the first one on the product card."
+msgstr "L’image principale vient en premier, puis la galerie ; le chat affiche la première sur la carte produit."
+
+#: includes/Admin/SettingsPage.php:228
+msgid "Product types"
+msgstr "Types de produits"
+
+#: includes/Admin/SettingsPage.php:237
+msgid "Catalog visibility"
+msgstr "Visibilité du catalogue"
+
+#: includes/Admin/SettingsPage.php:238
+msgid "Products with the catalog visibility chosen here are sent."
+msgstr "Les produits ayant l’une des visibilités du catalogue choisies ici sont envoyés."
+
+#: includes/Admin/SettingsPage.php:247
+msgid "Include out-of-stock products"
+msgstr "Inclure les produits en rupture de stock"
+
+#: includes/Admin/SettingsPage.php:248
+msgid "Send products that are out of stock"
+msgstr "Envoyer les produits en rupture de stock"
+
+#: includes/Admin/SettingsPage.php:249
+msgid "Recommended: the assistant then knows the product and can say it is out of stock - it never recommends it. Unchecked, products leave AskMerra while they are out of stock."
+msgstr "Recommandé : l’assistant connaît alors le produit et peut indiquer qu’il est en rupture de stock - il ne le recommande jamais. Si la case est décochée, les produits quittent AskMerra tant qu’ils sont en rupture de stock."
+
+#: includes/Admin/SettingsPage.php:255
+msgid "Send stock quantity"
+msgstr "Envoyer la quantité en stock"
+
+#: includes/Admin/SettingsPage.php:256
+msgid "Send the quantity in stock"
+msgstr "Envoyer la quantité disponible en stock"
+
+#: includes/Admin/SettingsPage.php:257
+msgid "For products that manage their own stock."
+msgstr "Pour les produits dont le stock est géré au niveau du produit."
+
+#: includes/Admin/SettingsPage.php:263
+msgid "Exclude categories"
+msgstr "Exclure des catégories"
+
+#: includes/Admin/SettingsPage.php:264
+msgid "Their subcategories are excluded too. To leave out single products, check <strong>Hide from AskMerra</strong> on the product (Product data, General)."
+msgstr "Leurs sous-catégories sont également exclues. Pour exclure des produits individuels, cochez <strong>Masquer dans AskMerra</strong> sur le produit (Données produit, Général)."
+
+#: includes/Admin/SettingsPage.php:271
+msgid "No categories"
+msgstr "Aucune catégorie"
+
+#: includes/Admin/SettingsPage.php:281
+msgid "Sync"
+msgstr "Synchronisation"
+
+#: includes/Admin/SettingsPage.php:284
+msgid "Only what changed is rebuilt and sent: product, price and stock changes - also those made by imports - are picked up within about a minute by WooCommerce's background jobs (Action Scheduler). Every day the plugin also adds products that are missing in AskMerra and removes the ones that left the catalog. Large catalogs are fine: 50,000 products are not sent again unless they change."
+msgstr "Seul ce qui a changé est reconstruit et envoyé : les modifications de produits, de prix et de stock - y compris celles effectuées par des imports - sont prises en compte en une minute environ par les tâches en arrière-plan de WooCommerce (Action Scheduler). Chaque jour, l’extension ajoute aussi les produits manquants dans AskMerra et retire ceux qui sont sortis du catalogue. Les grands catalogues ne posent aucun problème : 50 000 produits ne sont pas renvoyés tant qu’ils ne changent pas."
+
+#: includes/Admin/SettingsPage.php:287
+msgid "How AskMerra gets the catalog"
+msgstr "Comment AskMerra récupère le catalogue"
+
+#: includes/Admin/SettingsPage.php:288
+msgid "<strong>Push API</strong> sends changes within about a minute and removes deleted products. <strong>Product feed</strong> publishes a file that AskMerra downloads every 1 to 6 hours (depending on your plan) - add its URL in the AskMerra dashboard, under Catalog > Add source > Feed URL. Changing it sends the whole catalog again the new way."
+msgstr "<strong>Push API</strong> envoie les modifications en une minute environ et retire les produits supprimés. <strong>Flux de produits</strong> publie un fichier qu’AskMerra télécharge toutes les 1 à 6 heures (selon votre forfait) - ajoutez son URL dans le tableau de bord AskMerra, sous Catalogue > Ajouter une source > URL du flux. Modifier ce réglage renvoie l’intégralité du catalogue selon la nouvelle méthode."
+
+#: includes/Admin/SettingsPage.php:293
+msgid "Push API - changes within a minute (recommended)"
+msgstr "Push API - modifications en une minute (recommandé)"
+
+#: includes/Admin/SettingsPage.php:294
+msgid "Product feed - AskMerra downloads a file"
+msgstr "Flux de produits - AskMerra télécharge un fichier"
+
+#: includes/Admin/SettingsPage.php:298
+msgid "Products per request"
+msgstr "Produits par requête"
+
+#: includes/Admin/SettingsPage.php:299
+msgid "Push API, 1 to 500. Lower it if products have very long descriptions."
+msgstr "Push API, de 1 à 500. Réduisez cette valeur si les produits ont des descriptions très longues."
+
+#: includes/Admin/SettingsPage.php:307
+msgid "Daily maintenance at"
+msgstr "Maintenance quotidienne à"
+
+#. translators: %s: the site time zone, e.g. Europe/Bucharest
+#: includes/Admin/SettingsPage.php:310
+#, php-format
+msgid "Site time (%s). Adds missing products, removes products that left the catalog, picks up sale prices that start or end today."
+msgstr "Heure du site (%s). Ajoute les produits manquants, retire ceux qui sont sortis du catalogue et prend en compte les tarifs promo qui commencent ou se terminent aujourd’hui."
+
+#: includes/Admin/SettingsPage.php:319
+#: includes/Admin/StatusPage.php:407
+#: includes/Admin/StatusPage.php:438
+msgid "Full rebuild"
+msgstr "Reconstruction complète"
+
+#: includes/Admin/SettingsPage.php:320
+msgid "A safety net: every product is rebuilt and compared - still only changed ones are sent. Runs at the maintenance time."
+msgstr "Un filet de sécurité : chaque produit est reconstruit et comparé - seuls les produits modifiés sont toutefois envoyés. Elle s’exécute à l’heure de la maintenance."
+
+#: includes/Admin/SettingsPage.php:325
+msgid "Every week, on Sunday (recommended)"
+msgstr "Toutes les semaines, le dimanche (recommandé)"
+
+#: includes/Admin/SettingsPage.php:326
+msgid "Every day"
+msgstr "Tous les jours"
+
+#: includes/Admin/SettingsPage.php:327
+msgid "Every month, on the 1st"
+msgstr "Tous les mois, le 1er"
+
+#: includes/Admin/SettingsPage.php:328
+msgid "Only when started by hand"
+msgstr "Uniquement sur lancement manuel"
+
+#: includes/Admin/SettingsPage.php:339
+#: includes/Admin/StatusPage.php:366
+msgid "Product feed"
+msgstr "Flux de produits"
+
+#: includes/Admin/SettingsPage.php:342
+msgid "Used when AskMerra gets the catalog as a product feed."
+msgstr "Utilisé lorsqu’AskMerra récupère le catalogue sous forme de flux de produits."
+
+#: includes/Admin/SettingsPage.php:345
+msgid "Format"
+msgstr "Format"
+
+#: includes/Admin/SettingsPage.php:346
+msgid "<strong>JSON</strong> carries every selected attribute. <strong>Google Shopping XML</strong> can also be used for Google Merchant Center, but only keeps standard attributes (colour, size, material, gender, GTIN, EAN, skin type, ingredients, volume, weight...)."
+msgstr "<strong>JSON</strong> transmet tous les attributs sélectionnés. <strong>Google Shopping XML</strong> peut aussi servir pour Google Merchant Center, mais ne conserve que les attributs standard (couleur, taille, matière, sexe, GTIN, EAN, type de peau, ingrédients, volume, poids...)."
+
+#: includes/Admin/SettingsPage.php:351
+msgid "JSON - all attributes (recommended)"
+msgstr "JSON - tous les attributs (recommandé)"
+
+#: includes/Admin/SettingsPage.php:352
+msgid "Google Shopping XML"
+msgstr "Google Shopping XML"
+
+#: includes/Admin/SettingsPage.php:356
+msgid "Regenerate the feed"
+msgstr "Régénérer le flux"
+
+#: includes/Admin/SettingsPage.php:357
+msgid "Only changed products are rebuilt; the file itself is rewritten from them in seconds, and only when something changed. Keep it at least as often as AskMerra downloads it (every 1 to 6 hours, depending on the plan)."
+msgstr "Seuls les produits modifiés sont reconstruits ; le fichier lui-même est réécrit à partir d’eux en quelques secondes, et seulement si quelque chose a changé. Choisissez une fréquence au moins égale à celle à laquelle AskMerra le télécharge (toutes les 1 à 6 heures, selon le forfait)."
+
+#: includes/Admin/SettingsPage.php:362
+msgid "Every hour"
+msgstr "Toutes les heures"
+
+#: includes/Admin/SettingsPage.php:363
+msgid "Every 3 hours"
+msgstr "Toutes les 3 heures"
+
+#: includes/Admin/SettingsPage.php:364
+msgid "Every 6 hours"
+msgstr "Toutes les 6 heures"
+
+#: includes/Admin/SettingsPage.php:365
+msgid "Every 8 hours"
+msgstr "Toutes les 8 heures"
+
+#: includes/Admin/SettingsPage.php:366
+msgid "Every 12 hours"
+msgstr "Toutes les 12 heures"
+
+#: includes/Admin/SettingsPage.php:367
+msgid "Once a day"
+msgstr "Une fois par jour"
+
+#: includes/Admin/SettingsPage.php:371
+#: includes/Admin/StatusPage.php:411
+msgid "Feed URL"
+msgstr "URL du flux"
+
+#: includes/Admin/SettingsPage.php:387
+msgid "Look, greeting, colours and where the chat shows are set in the AskMerra widget designer. The script is added to the <code>&lt;head&gt;</code> of every page, with classic and block themes alike."
+msgstr "L’apparence, le message d’accueil, les couleurs et les endroits où le chat s’affiche se définissent dans l’éditeur de widget AskMerra. Le script est ajouté au <code>&lt;head&gt;</code> de chaque page, aussi bien avec les thèmes classiques qu’avec les thèmes basés sur des blocs."
+
+#: includes/Admin/SettingsPage.php:390
+msgid "Show the chat widget"
+msgstr "Afficher le widget de chat"
+
+#: includes/Admin/SettingsPage.php:391
+msgid "Show the AskMerra chat on the storefront"
+msgstr "Afficher le chat AskMerra en vitrine"
+
+#: includes/Admin/SettingsPage.php:392
+msgid "Needs the site key (Connection)."
+msgstr "Nécessite la clé de site (Connexion)."
+
+#: includes/Admin/SettingsPage.php:398
+msgid "Widget script URL"
+msgstr "URL du script du widget"
+
+#. translators: %s: the default widget script URL
+#: includes/Admin/SettingsPage.php:401
+#, php-format
+msgid "The <code>src</code> of the snippet in the AskMerra dashboard (Install); the snippet's other value is the site key. Empty: %s"
+msgstr "La valeur <code>src</code> de l’extrait de code du tableau de bord AskMerra (Installation) ; l’autre valeur de l’extrait est la clé de site. Si vide : %s"
+
+#: includes/Admin/SettingsPage.php:411
+msgid "Position"
+msgstr "Position"
+
+#: includes/Admin/SettingsPage.php:416
+msgid "As set in the AskMerra designer"
+msgstr "Comme défini dans l’éditeur AskMerra"
+
+#: includes/Admin/SettingsPage.php:417
+msgid "Bottom right"
+msgstr "En bas à droite"
+
+#: includes/Admin/SettingsPage.php:418
+msgid "Bottom left"
+msgstr "En bas à gauche"
+
+#: includes/Admin/SettingsPage.php:422
+msgid "Open on page load"
+msgstr "Ouvrir au chargement de la page"
+
+#: includes/Admin/SettingsPage.php:423
+msgid "Open the chat when a page loads"
+msgstr "Ouvrir le chat au chargement d’une page"
+
+#: includes/Admin/SettingsPage.php:424
+msgid "Desktop only."
+msgstr "Sur ordinateur uniquement."
+
+#: includes/Admin/SettingsPage.php:430
+msgid "Show on the checkout page"
+msgstr "Afficher sur la page de validation de la commande"
+
+#: includes/Admin/SettingsPage.php:431
+msgid "Show the chat while the shopper pays"
+msgstr "Afficher le chat pendant que le client paie"
+
+#: includes/Admin/SettingsPage.php:432
+msgid "Off by default so shoppers are not distracted while paying. The order received page always loads the widget when orders are reported."
+msgstr "Désactivé par défaut pour ne pas distraire les clients pendant le paiement. La page de confirmation de commande charge toujours le widget lorsque les commandes sont transmises."
+
+#: includes/Admin/SettingsPage.php:438
+msgid "Know the product being viewed"
+msgstr "Connaître le produit consulté"
+
+#: includes/Admin/SettingsPage.php:439
+msgid "Tell the assistant which product page is open"
+msgstr "Indiquer à l’assistant quelle page produit est ouverte"
+
+#: includes/Admin/SettingsPage.php:440
+msgid "On product pages the assistant knows which product the shopper is looking at (\"Is this good for dry skin?\")."
+msgstr "Sur les pages produit, l’assistant sait quel produit le client consulte (« Est-ce adapté aux peaux sèches ? »)."
+
+#: includes/Admin/SettingsPage.php:446
+msgid "Add to cart from the chat"
+msgstr "Ajouter au panier depuis le chat"
+
+#: includes/Admin/SettingsPage.php:447
+msgid "Let shoppers add products to the cart from the chat"
+msgstr "Permettre aux clients d’ajouter des produits au panier depuis le chat"
+
+#: includes/Admin/SettingsPage.php:448
+msgid "Simple products go straight into the WooCommerce cart and the mini cart refreshes; products with options (sizes, colours...) open their page. Also turn on \"Show add to cart\" in the AskMerra widget designer."
+msgstr "Les produits simples vont directement dans le panier WooCommerce et le mini-panier s’actualise ; les produits avec options (tailles, couleurs...) ouvrent leur page. Activez aussi « Afficher le bouton “Ajouter au panier” » dans l’éditeur de widget AskMerra."
+
+#: includes/Admin/SettingsPage.php:454
+msgid "After adding to cart"
+msgstr "Après l’ajout au panier"
+
+#: includes/Admin/SettingsPage.php:459
+msgid "Stay on the page (mini cart refreshes)"
+msgstr "Rester sur la page (le mini-panier s’actualise)"
+
+#: includes/Admin/SettingsPage.php:460
+msgid "Go to the cart page"
+msgstr "Aller à la page du panier"
+
+#: includes/Admin/SettingsPage.php:464
+msgid "Report orders to AskMerra"
+msgstr "Transmettre les commandes à AskMerra"
+
+#: includes/Admin/SettingsPage.php:465
+msgid "Report orders on the order received page"
+msgstr "Transmettre les commandes depuis la page de confirmation de commande"
+
+#: includes/Admin/SettingsPage.php:466
+msgid "So AskMerra can show the sales the assistant helped with. No name, e-mail or address is sent - only the order number, total and products."
+msgstr "Pour qu’AskMerra puisse afficher les ventes auxquelles l’assistant a contribué. Le nom, l’e-mail et l’adresse ne sont pas envoyés - uniquement le numéro de commande, le total et les produits."
+
+#: includes/Admin/SettingsPage.php:472
+msgid "Analytics consent"
+msgstr "Consentement aux statistiques"
+
+#: includes/Admin/SettingsPage.php:473
+msgid "Orders are reported only with the shopper's analytics consent. <strong>Automatic</strong>: read from Google Consent Mode / Google Tag Manager. <strong>WP Consent API</strong>: from a consent plugin that supports it (Complianz, CookieYes, Cookiebot...). <strong>Not needed</strong>: no consent banner is required on this site. <strong>Manual</strong>: your cookie banner calls <code>AskMerra.setConsent({analytics: true})</code>."
+msgstr "Les commandes ne sont transmises qu’avec le consentement du client aux statistiques. <strong>Automatique</strong> : lu depuis Google Consent Mode / Google Tag Manager. <strong>WP Consent API</strong> : depuis une extension de consentement qui la prend en charge (Complianz, CookieYes, Cookiebot...). <strong>Non nécessaire</strong> : aucune bannière de consentement n’est requise sur ce site. <strong>Manuel</strong> : votre bannière de cookies appelle <code>AskMerra.setConsent({analytics: true})</code>."
+
+#: includes/Admin/SettingsPage.php:479
+msgid "Automatic (Google Consent Mode / Tag Manager)"
+msgstr "Automatique (Google Consent Mode / Tag Manager)"
+
+#: includes/Admin/SettingsPage.php:480
+msgid "WP Consent API (consent plugin)"
+msgstr "WP Consent API (extension de consentement)"
+
+#: includes/Admin/SettingsPage.php:481
+msgid "Not needed on this site"
+msgstr "Non nécessaire sur ce site"
+
+#: includes/Admin/SettingsPage.php:482
+msgid "Manual (set by my cookie banner)"
+msgstr "Manuel (défini par ma bannière de cookies)"
+
+#: includes/Admin/SettingsPage.php:498
+msgid "API URL"
+msgstr "URL de l’API"
+
+#: includes/Admin/SettingsPage.php:499
+msgid "Change only for an AskMerra test environment."
+msgstr "À modifier uniquement pour un environnement de test AskMerra."
+
+#: includes/Admin/SettingsPage.php:507
+msgid "Request timeout (seconds)"
+msgstr "Délai d’expiration des requêtes (secondes)"
+
+#: includes/Admin/SettingsPage.php:515
+msgid "Debug log"
+msgstr "Journal de débogage"
+
+#: includes/Admin/SettingsPage.php:516
+msgid "Log every request and response"
+msgstr "Journaliser chaque requête et chaque réponse"
+
+#: includes/Admin/SettingsPage.php:517
+msgid "Written to WooCommerce > Status > Logs, source \"askmerra\". Errors are always logged."
+msgstr "Écrit dans WooCommerce > État > Journaux, source « askmerra ». Les erreurs sont toujours journalisées."
+
+#: includes/Admin/SettingsPage.php:574
+msgid "The WP Consent API plugin is not active: with this choice no order is ever reported. Activate WP Consent API (and a consent plugin that supports it), or choose another option."
+msgstr "L’extension WP Consent API n’est pas active : avec ce choix, aucune commande n’est jamais transmise. Activez WP Consent API (et une extension de consentement qui la prend en charge), ou choisissez une autre option."
+
+#: includes/Admin/SettingsPage.php:582
+msgid "English"
+msgstr "Anglais"
+
+#: includes/Admin/SettingsPage.php:583
+msgid "Romanian"
+msgstr "Roumain"
+
+#: includes/Admin/SettingsPage.php:584
+msgid "Italian"
+msgstr "Italien"
+
+#: includes/Admin/SettingsPage.php:585
+msgid "French"
+msgstr "Français"
+
+#: includes/Admin/SettingsPage.php:586
+msgid "German"
+msgstr "Allemand"
+
+#: includes/Admin/SettingsPage.php:587
+msgid "Spanish"
+msgstr "Espagnol"
+
+#. translators: %s: a language name, e.g. Romanian
+#: includes/Admin/SettingsPage.php:593
+#, php-format
+msgid "Automatic (from the site language: %s)"
+msgstr "Automatique (selon la langue du site : %s)"
+
+#: includes/Admin/SettingsPage.php:594
+msgid "Automatic - AskMerra does not serve the site language: choose one"
+msgstr "Automatique - AskMerra ne prend pas en charge la langue du site : choisissez-en une"
+
+#: includes/Admin/SettingsPage.php:619
+msgid "The product attributes could not be read; see WooCommerce > Status > Logs (askmerra)."
+msgstr "Impossible de lire les attributs produit ; consultez WooCommerce > État > Journaux (askmerra)."
+
+#: includes/Admin/StatusPage.php:57
+#: includes/Admin/StatusPage.php:74
+msgid "AskMerra sync status"
+msgstr "État de la synchronisation AskMerra"
+
+#. translators: %s: the error
+#: includes/Admin/StatusPage.php:84
+#, php-format
+msgid "The sync status could not be read: %s"
+msgstr "Impossible de lire l’état de la synchronisation : %s"
+
+#: includes/Admin/StatusPage.php:90
+msgid "Orders are not reported to AskMerra: the analytics consent is set to \"WP Consent API\", but the WP Consent API plugin is not active. Activate it (with a consent plugin that supports it), or choose another option under Settings, Storefront widget."
+msgstr "Les commandes ne sont pas transmises à AskMerra : le consentement aux statistiques est réglé sur « WP Consent API », mais l’extension WP Consent API n’est pas active. Activez-la (avec une extension de consentement qui la prend en charge), ou choisissez une autre option dans Réglages, Widget en vitrine."
+
+#: includes/Admin/StatusPage.php:97
+msgid "Only products whose content changed are rebuilt and sent. Changes are picked up within about a minute by WooCommerce's background jobs; every day missing products are added and products that left the catalog are removed."
+msgstr "Seuls les produits dont le contenu a changé sont reconstruits et envoyés. Les tâches en arrière-plan de WooCommerce prennent en compte les modifications en une minute environ ; chaque jour, les produits manquants sont ajoutés et ceux sortis du catalogue sont retirés."
+
+#: includes/Admin/StatusPage.php:103
+msgid "Background jobs"
+msgstr "Tâches en arrière-plan"
+
+#: includes/Admin/StatusPage.php:105
+msgid "Logs"
+msgstr "Journaux"
+
+#: includes/Admin/StatusPage.php:125
+msgid "You are not allowed to manage AskMerra."
+msgstr "Vous n’avez pas l’autorisation de gérer AskMerra."
+
+#. translators: %s: the error
+#: includes/Admin/StatusPage.php:156
+#, php-format
+msgid "The action failed: %s"
+msgstr "L’action a échoué : %s"
+
+#: includes/Admin/StatusPage.php:170
+msgid "The background job is sending the queue right now. Check again in a minute."
+msgstr "La tâche en arrière-plan est en train d’envoyer la file d’attente. Vérifiez à nouveau dans une minute."
+
+#: includes/Admin/StatusPage.php:195
+msgid "Nothing was waiting to be sent."
+msgstr "Rien n’était en attente d’envoi."
+
+#. translators: 1-4: numbers of products
+#: includes/Admin/StatusPage.php:199
+#, php-format
+msgid "Sent or updated: %1$d, unchanged: %2$d, removed: %3$d, failed: %4$d."
+msgstr "Envoyés ou mis à jour : %1$d, inchangés : %2$d, retirés : %3$d, en échec : %4$d."
+
+#. translators: %d: number of products
+#: includes/Admin/StatusPage.php:210
+#, php-format
+msgid "%d product is still waiting; the background job continues with it."
+msgid_plural "%d products are still waiting; the background job continues with them."
+msgstr[0] "%d produit est encore en attente ; la tâche en arrière-plan poursuit son traitement."
+msgstr[1] "%d produits sont encore en attente ; la tâche en arrière-plan poursuit leur traitement."
+
+#. translators: 1: missing products, 2: products that left the catalog, 3: products with sale dates
+#: includes/Admin/StatusPage.php:224
+#, php-format
+msgid "Daily check done: %1$d missing products and %2$d products that left the catalog were queued, %3$d with sale prices starting or ending today."
+msgstr "Vérification quotidienne terminée : %1$d produits manquants et %2$d produits sortis du catalogue ont été mis en file d’attente, %3$d avec des tarifs promo qui commencent ou se terminent aujourd’hui."
+
+#: includes/Admin/StatusPage.php:263
+msgid "The feed is published once the whole catalog is ready."
+msgstr "Le flux est publié dès que tout le catalogue est prêt."
+
+#: includes/Admin/StatusPage.php:264
+msgid "The feed is up to date."
+msgstr "Le flux est à jour."
+
+#. translators: %s: the reason
+#: includes/Admin/StatusPage.php:266
+#, php-format
+msgid "The feed could not be written: %s"
+msgstr "Impossible de générer le flux : %s"
+
+#: includes/Admin/StatusPage.php:267
+msgid "This storefront does not send its catalog as a feed."
+msgstr "Cette vitrine n’envoie pas son catalogue sous forme de flux."
+
+#: includes/Admin/StatusPage.php:277
+msgid "The feeds have new URLs. Update the feed sources in the AskMerra dashboard."
+msgstr "Les flux ont de nouvelles URL. Mettez à jour les sources de flux dans le tableau de bord AskMerra."
+
+#: includes/Admin/StatusPage.php:285
+msgid "Turn AskMerra off first (Settings, Connection): otherwise the products are sent again at the next daily check."
+msgstr "Désactivez d’abord AskMerra (Réglages, Connexion) : sinon les produits seront de nouveau envoyés lors de la prochaine vérification quotidienne."
+
+#: includes/Admin/StatusPage.php:301
+msgid "No product was given."
+msgstr "Aucun produit n’a été indiqué."
+
+#. translators: %d: product ID
+#: includes/Admin/StatusPage.php:317
+#, php-format
+msgid "Product %d is queued: the background job is sending right now and sends it within a minute."
+msgstr "Le produit %d est en file d’attente : la tâche en arrière-plan est en cours d’envoi et l’enverra dans la minute."
+
+#. translators: %d: product ID
+#: includes/Admin/StatusPage.php:319
+#, php-format
+msgid "Product %d was processed. Its preview below shows the result."
+msgstr "Le produit %d a été traité. Son aperçu ci-dessous montre le résultat."
+
+#: includes/Admin/StatusPage.php:334
+msgid "Unknown action."
+msgstr "Action inconnue."
+
+#: includes/Admin/StatusPage.php:350
+msgid "Unknown storefront."
+msgstr "Vitrine inconnue."
+
+#: includes/Admin/StatusPage.php:356
+msgid "AskMerra does not sync this storefront. Check its settings."
+msgstr "AskMerra ne synchronise pas cette vitrine. Vérifiez ses réglages."
+
+#: includes/Admin/StatusPage.php:365
+msgid "Push API"
+msgstr "Push API"
+
+#: includes/Admin/StatusPage.php:370
+msgid "Not syncing: no secret key"
+msgstr "Pas de synchronisation : aucune clé secrète"
+
+#: includes/Admin/StatusPage.php:371
+msgid "Off"
+msgstr "Désactivé"
+
+#. translators: 1: date and time, 2: AskMerra's message
+#: includes/Admin/StatusPage.php:387
+#, php-format
+msgid "AskMerra refuses this storefront's key since %1$s: %2$s"
+msgstr "AskMerra refuse la clé de cette vitrine depuis le %1$s : %2$s"
+
+#: includes/Admin/StatusPage.php:391
+msgid "Hide until it happens again"
+msgstr "Masquer jusqu’à ce que cela se reproduise"
+
+#: includes/Admin/StatusPage.php:401
+msgid "Language / currency"
+msgstr "Langue / devise"
+
+#: includes/Admin/StatusPage.php:401
+msgid "shop default"
+msgstr "par défaut de la boutique"
+
+#: includes/Admin/StatusPage.php:402
+msgid "Products in AskMerra"
+msgstr "Produits dans AskMerra"
+
+#: includes/Admin/StatusPage.php:403
+msgid "Waiting to be sent"
+msgstr "En attente d’envoi"
+
+#: includes/Admin/StatusPage.php:404
+msgid "Failed"
+msgstr "En échec"
+
+#: includes/Admin/StatusPage.php:405
+msgid "Last product sent"
+msgstr "Dernier produit envoyé"
+
+#: includes/Admin/StatusPage.php:406
+msgid "Daily check"
+msgstr "Vérification quotidienne"
+
+#: includes/Admin/StatusPage.php:412
+msgid "Feed file"
+msgstr "Fichier du flux"
+
+#: includes/Admin/StatusPage.php:425
+msgid "Send changes now"
+msgstr "Envoyer les modifications maintenant"
+
+#: includes/Admin/StatusPage.php:428
+msgid "Write the feed now"
+msgstr "Générer le flux maintenant"
+
+#: includes/Admin/StatusPage.php:432
+msgid "Retry failed products"
+msgstr "Relancer les produits en échec"
+
+#: includes/Admin/StatusPage.php:435
+msgid "Run the daily check now"
+msgstr "Lancer la vérification quotidienne maintenant"
+
+#: includes/Admin/StatusPage.php:441
+msgid "Rebuild every product of this storefront? Only products whose content changed are sent."
+msgstr "Reconstruire tous les produits de cette vitrine ? Seuls les produits dont le contenu a changé sont envoyés."
+
+#. translators: %d: number of products
+#: includes/Admin/StatusPage.php:448
+#, php-format
+msgid "This storefront no longer syncs, but AskMerra still has %d of its products."
+msgid_plural "This storefront no longer syncs, but AskMerra still has %d of its products."
+msgstr[0] "Cette vitrine n’est plus synchronisée, mais AskMerra contient encore %d de ses produits."
+msgstr[1] "Cette vitrine n’est plus synchronisée, mais AskMerra contient encore %d de ses produits."
+
+#: includes/Admin/StatusPage.php:454
+msgid "Remove its products from AskMerra"
+msgstr "Retirer ses produits d’AskMerra"
+
+#: includes/Admin/StatusPage.php:457
+msgid "Remove every product of this storefront from AskMerra? The assistant stops recommending them. A feed source must also be deleted in the AskMerra dashboard."
+msgstr "Retirer d’AskMerra tous les produits de cette vitrine ? L’assistant cesse de les recommander. Une source de flux doit aussi être supprimée dans le tableau de bord AskMerra."
+
+#: includes/Admin/StatusPage.php:472
+msgid "Latest errors"
+msgstr "Dernières erreurs"
+
+#: includes/Admin/StatusPage.php:475
+msgid "Product"
+msgstr "Produit"
+
+#: includes/Admin/StatusPage.php:475
+msgid "Attempts"
+msgstr "Tentatives"
+
+#: includes/Admin/StatusPage.php:475
+msgid "Next attempt"
+msgstr "Prochaine tentative"
+
+#: includes/Admin/StatusPage.php:475
+msgid "Error"
+msgstr "Erreur"
+
+#: includes/Admin/StatusPage.php:492
+msgid "none: retry, or change the product"
+msgstr "aucune : relancez ou modifiez le produit"
+
+#: includes/Admin/StatusPage.php:503
+msgid "Feed URLs"
+msgstr "URL des flux"
+
+#: includes/Admin/StatusPage.php:504
+msgid "The feed URLs hold a secret part so only AskMerra can find them. If a URL was shared by mistake, give every feed a new one - then update the feed sources in the AskMerra dashboard."
+msgstr "Les URL des flux contiennent une partie secrète afin que seul AskMerra puisse les trouver. Si une URL a été partagée par erreur, attribuez une nouvelle URL à chaque flux - puis mettez à jour les sources de flux dans le tableau de bord AskMerra."
+
+#: includes/Admin/StatusPage.php:507
+msgid "Give the feeds new URLs"
+msgstr "Attribuer de nouvelles URL aux flux"
+
+#: includes/Admin/StatusPage.php:510
+msgid "Every feed gets a new URL and the old ones stop working. Update the feed sources in AskMerra afterwards. Continue?"
+msgstr "Chaque flux reçoit une nouvelle URL et les anciennes cessent de fonctionner. Mettez ensuite à jour les sources de flux dans AskMerra. Continuer ?"
+
+#: includes/Admin/StatusPage.php:526
+msgid "Preview a product"
+msgstr "Aperçu d’un produit"
+
+#: includes/Admin/StatusPage.php:532
+msgid "Product ID or SKU"
+msgstr "ID du produit ou UGS"
+
+#: includes/Admin/StatusPage.php:547
+msgid "Preview"
+msgstr "Prévisualiser"
+
+#. translators: %s: the error
+#: includes/Admin/StatusPage.php:556
+#, php-format
+msgid "The preview failed: %s"
+msgstr "L’aperçu a échoué : %s"
+
+#. translators: %s: what was searched
+#: includes/Admin/StatusPage.php:575
+#, php-format
+msgid "No product with the ID or SKU \"%s\"."
+msgstr "Aucun produit avec l’ID ou l’UGS « %s »."
+
+#. translators: 1: variation ID, 2: product ID
+#: includes/Admin/StatusPage.php:583
+#, php-format
+msgid "%1$d is a variation of product %2$d: AskMerra receives the product, with its options."
+msgstr "%1$d est une variation du produit %2$d : AskMerra reçoit le produit, avec ses options."
+
+#: includes/Admin/StatusPage.php:594
+msgid "Not in AskMerra yet."
+msgstr "Pas encore dans AskMerra."
+
+#: includes/Admin/StatusPage.php:595
+msgid "AskMerra has this version."
+msgstr "AskMerra dispose de cette version."
+
+#: includes/Admin/StatusPage.php:596
+msgid "AskMerra has an older version; the change is sent by the queue."
+msgstr "AskMerra dispose d’une version plus ancienne ; la modification est envoyée via la file d’attente."
+
+#. translators: %d: product ID
+#: includes/Admin/StatusPage.php:601
+#, php-format
+msgid "Product %d as AskMerra receives it:"
+msgstr "Produit %d tel qu’AskMerra le reçoit :"
+
+#: includes/Admin/StatusPage.php:615
+msgid "It is still in AskMerra and is removed by the queue."
+msgstr "Il est encore dans AskMerra et est retiré via la file d’attente."
+
+#. translators: %d: product ID
+#: includes/Admin/StatusPage.php:620
+#, php-format
+msgid "Product %d is not sent to AskMerra."
+msgstr "Le produit %d n’est pas envoyé à AskMerra."
+
+#: includes/Admin/StatusPage.php:640
+msgid "Send this product now"
+msgstr "Envoyer ce produit maintenant"
+
+#. translators: 1: JSON or XML, 2: size in KB, 3: date and time
+#: includes/Admin/StatusPage.php:716
+#, php-format
+msgid "%1$s, %2$s KB, %3$s"
+msgstr "%1$s, %2$s Ko, %3$s"
+
+#: includes/Admin/StatusPage.php:723
+msgid "products changed since; rewritten at the next scheduled run"
+msgstr "produits modifiés depuis ; réécrit lors de la prochaine exécution planifiée"
+
+#. translators: 1: why the call failed, 2: request id for AskMerra support
+#: includes/Api/ApiException.php:31
+#, php-format
+msgid "AskMerra could not be reached: %1$s (request %2$s)"
+msgstr "Impossible de joindre AskMerra : %1$s (requête %2$s)"
+
+#. translators: 1: HTTP status, 2: AskMerra error code, 3: AskMerra error message, 4: request id
+#: includes/Api/ApiException.php:62
+#, php-format
+msgid "AskMerra API error %1$d %2$s: %3$s (request %4$s)"
+msgstr "Erreur de l’API AskMerra %1$d %2$s : %3$s (requête %4$s)"
+
+#: includes/Api/Client.php:131
+msgid "No AskMerra secret key is saved. Enter it under WooCommerce > Settings > AskMerra."
+msgstr "Aucune clé secrète AskMerra n’est enregistrée. Saisissez-la dans WooCommerce > Réglages > AskMerra."
+
+#. translators: 1: request size in bytes, 2: largest size sent
+#: includes/Api/Client.php:144
+#, php-format
+msgid "The request was not sent: %1$d bytes is more than the %2$d AskMerra accepts in one call."
+msgstr "La requête n’a pas été envoyée : %1$d octets dépassent les %2$d acceptés par AskMerra en un seul appel."
+
+#: includes/Api/Client.php:201
+msgid "no HTTP status"
+msgstr "aucun code d’état HTTP"
+
+#. translators: 1: HTTP status, 2: the address it redirects to
+#: includes/Api/Client.php:204
+#, php-format
+msgid "the API answered with a redirect (HTTP %1$d to %2$s) - check the API URL"
+msgstr "l’API a répondu par une redirection (HTTP %1$d vers %2$s) - vérifiez l’URL de l’API"
+
+#: includes/Api/Client.php:216
+msgid "the response is not JSON"
+msgstr "la réponse n’est pas au format JSON"
+
+#. translators: %s: name of an attribute typed on products
+#: includes/Catalog/AttributeValues.php:59
+#, php-format
+msgid "%s (product attribute)"
+msgstr "%s (attribut de produit)"
+
+#. translators: %s: attribute label
+#: includes/Catalog/AttributeValues.php:92
+#, php-format
+msgid "%s (attribute)"
+msgstr "%s (attribut)"
+
+#: includes/Catalog/ProductBuilder.php:406
+msgid "Deleted, or not a product."
+msgstr "Supprimé, ou il ne s’agit pas d’un produit."
+
+#: includes/Catalog/ProductBuilder.php:410
+msgid "A variation: it is sent as part of its variable product."
+msgstr "Une variation : elle est envoyée avec son produit variable."
+
+#: includes/Catalog/ProductBuilder.php:419
+msgid "Not published, or protected by a password."
+msgstr "Non publié, ou protégé par un mot de passe."
+
+#. translators: %s: product type
+#: includes/Catalog/ProductBuilder.php:427
+#, php-format
+msgid "Products of type \"%s\" are not sent."
+msgstr "Les produits de type « %s » ne sont pas envoyés."
+
+#. translators: %s: catalog visibility, e.g. "Hidden"
+#: includes/Catalog/ProductBuilder.php:434
+#, php-format
+msgid "Its catalog visibility (\"%s\") is not sent."
+msgstr "Sa visibilité du catalogue (« %s ») ne fait pas partie de celles qui sont envoyées."
+
+#: includes/Catalog/ProductBuilder.php:438
+msgid "\"Hide from AskMerra\" is set on the product."
+msgstr "« Masquer dans AskMerra » est activé sur le produit."
+
+#: includes/Catalog/ProductBuilder.php:442
+msgid "It is in an excluded category."
+msgstr "Il se trouve dans une catégorie exclue."
+
+#: includes/Catalog/ProductBuilder.php:446
+msgid "It is out of stock, and out-of-stock products are not sent."
+msgstr "Il est en rupture de stock, et les produits en rupture de stock ne sont pas envoyés."
+
+#: includes/Catalog/ProductBuilder.php:450
+msgid "It has no name."
+msgstr "Il n’a pas de nom."
+
+#. translators: %d: products still waiting in the queue
+#: includes/Feed/FeedGenerator.php:167
+#, php-format
+msgid "The catalog is being prepared (%d product to go); the feed is published once all of it is ready."
+msgid_plural "The catalog is being prepared (%d products to go); the feed is published once all of it is ready."
+msgstr[0] "Le catalogue est en préparation (encore %d produit) ; le flux est publié dès qu’il est entièrement prêt."
+msgstr[1] "Le catalogue est en préparation (encore %d produits) ; le flux est publié dès qu’il est entièrement prêt."
+
+#: includes/Feed/FeedGenerator.php:175
+msgid "The catalog is being prepared; the feed is published once all of it is ready."
+msgstr "Le catalogue est en préparation ; le flux est publié dès qu’il est entièrement prêt."
+
+#. translators: %s: file path
+#: includes/Feed/FeedGenerator.php:223
+#, php-format
+msgid "The feed file %s cannot be created."
+msgstr "Impossible de créer le fichier du flux %s."
+
+#. translators: %d: number of damaged products
+#: includes/Feed/FeedGenerator.php:259
+#, php-format
+msgid "%d stored product was damaged and is being rebuilt; the previous feed file stays until then."
+msgid_plural "%d stored products were damaged and are being rebuilt; the previous feed file stays until then."
+msgstr[0] "%d produit enregistré était endommagé et est en cours de reconstruction ; le fichier du flux précédent est conservé d’ici là."
+msgstr[1] "%d produits enregistrés étaient endommagés et sont en cours de reconstruction ; le fichier du flux précédent est conservé d’ici là."
+
+#: includes/Feed/FeedGenerator.php:274
+#: includes/Feed/FileOutput.php:24
+msgid "The feed file could not be written (is the disk full?)."
+msgstr "Impossible d’écrire le fichier du flux (le disque est-il plein ?)."
+
+#. translators: %s: file path
+#: includes/Feed/FeedGenerator.php:284
+#, php-format
+msgid "The feed file %s cannot be replaced."
+msgstr "Impossible de remplacer le fichier du flux %s."
+
+#. translators: %s: folder path
+#: includes/Feed/FeedGenerator.php:382
+#, php-format
+msgid "The feed folder %s cannot be created or written to."
+msgstr "Impossible de créer le dossier du flux %s ou d’y écrire."
+
+#: includes/Frontend/AddToCart.php:77
+#: includes/Frontend/AddToCart.php:109
+msgid "This product is no longer available."
+msgstr "Ce produit n’est plus disponible."
+
+#. translators: %s: product name
+#: includes/Frontend/AddToCart.php:134
+#, php-format
+msgid "%s was added to your cart."
+msgstr "Le produit %s a été ajouté à votre panier."
+
+#: includes/Frontend/AddToCart.php:136
+msgid "View cart"
+msgstr "Voir le panier"
+
+#: includes/Frontend/Widget.php:148
+msgid "The product could not be added to your cart. Please try again."
+msgstr "Le produit n’a pas pu être ajouté à votre panier. Veuillez réessayer."
+
+#: includes/Sync/Status.php:99
+msgid "The AskMerra background jobs have not run for 15 minutes and WP-Cron is turned off on this site (DISABLE_WP_CRON): nothing is sent. Have the server run wp-cron.php, or \"wp action-scheduler run\", every minute."
+msgstr "Les tâches en arrière-plan d’AskMerra ne se sont pas exécutées depuis 15 minutes et WP-Cron est désactivé sur ce site (DISABLE_WP_CRON) : rien n’est envoyé. Faites exécuter wp-cron.php, ou « wp action-scheduler run », par le serveur toutes les minutes."
+
+#: includes/Sync/Status.php:100
+msgid "The AskMerra background jobs have not run for 15 minutes: nothing is sent. WordPress runs them when the site gets visits (WP-Cron); on a quiet site, or behind a full-page cache, have the server run wp-cron.php or \"wp action-scheduler run\" every minute. Details: WooCommerce > Status > Scheduled Actions, group \"askmerra\"."
+msgstr "Les tâches en arrière-plan d’AskMerra ne se sont pas exécutées depuis 15 minutes : rien n’est envoyé. WordPress les exécute lorsque le site reçoit des visites (WP-Cron) ; sur un site peu visité, ou derrière un cache de page complète, faites exécuter wp-cron.php ou « wp action-scheduler run » par le serveur toutes les minutes. Détails : WooCommerce > État > Actions planifiées, groupe « askmerra »."
+
+#. translators: %d: number of failed background jobs
+#: includes/Sync/Status.php:108
+#, php-format
+msgid "%d AskMerra background job failed in the last day. See WooCommerce > Status > Scheduled Actions (group \"askmerra\") and WooCommerce > Status > Logs (source \"askmerra\")."
+msgid_plural "%d AskMerra background jobs failed in the last day. See WooCommerce > Status > Scheduled Actions (group \"askmerra\") and WooCommerce > Status > Logs (source \"askmerra\")."
+msgstr[0] "%d tâche en arrière-plan d’AskMerra a échoué au cours des dernières 24 heures. Consultez WooCommerce > État > Actions planifiées (groupe « askmerra ») et WooCommerce > État > Journaux (source « askmerra »)."
+msgstr[1] "%d tâches en arrière-plan d’AskMerra ont échoué au cours des dernières 24 heures. Consultez WooCommerce > État > Actions planifiées (groupe « askmerra ») et WooCommerce > État > Journaux (source « askmerra »)."
+
+#. translators: %s: the WordPress site language, e.g. pt_BR
+#: includes/Sync/Status.php:122
+#, php-format
+msgid "The site language (%s) is not one AskMerra serves: choose the language to send under WooCommerce > Settings > AskMerra > Connection."
+msgstr "La langue du site (%s) n’est pas prise en charge par AskMerra : choisissez la langue d’envoi dans WooCommerce > Réglages > AskMerra > Connexion."
+
+#: includes/Admin/ConnectionTest.php:63
+msgid "Only an administrator can check the connection with an API URL outside askmerra.com."
+msgstr "Seul un administrateur peut vérifier la connexion avec une URL d’API en dehors d’askmerra.com."
+
+#. translators: %s: a settings field label
+#: includes/Admin/SettingsFields.php:326
+#, php-format
+msgid "%s: only an administrator can use an address outside askmerra.com. The previous value was kept."
+msgstr "%s : seul un administrateur peut utiliser une adresse en dehors d’askmerra.com. La valeur précédente a été conservée."
+
+#. translators: %d: number of products
+#: includes/Admin/SettingsFields.php:357
+#, php-format
+msgid "Being prepared: %d product to go. The URL works once the whole catalog is ready."
+msgid_plural "Being prepared: %d products to go. The URL works once the whole catalog is ready."
+msgstr[0] "En préparation : encore %d produit. L’URL fonctionne dès que tout le catalogue est prêt."
+msgstr[1] "En préparation : encore %d produits. L’URL fonctionne dès que tout le catalogue est prêt."
+
+#. translators: %d: number of products
+#: includes/Admin/StatusPage.php:239
+#, php-format
+msgid "%d product queued for the rebuild. The background job sends it within the next minutes if its content changed."
+msgid_plural "%d products queued for the rebuild. The background job sends those whose content changed within the next minutes."
+msgstr[0] "%d produit mis en file d’attente pour la reconstruction. Dans les minutes qui suivent, la tâche en arrière-plan l’envoie si son contenu a changé."
+msgstr[1] "%d produits mis en file d’attente pour la reconstruction. Dans les minutes qui suivent, la tâche en arrière-plan envoie ceux dont le contenu a changé."
+
+#. translators: %d: number of products
+#: includes/Admin/StatusPage.php:250
+#, php-format
+msgid "%d failed product is tried again."
+msgid_plural "%d failed products are tried again."
+msgstr[0] "Nouvelle tentative pour %d produit en échec."
+msgstr[1] "Nouvelle tentative pour %d produits en échec."
+
+#. translators: %d: number of products
+#: includes/Admin/StatusPage.php:292
+#, php-format
+msgid "%d product was removed from AskMerra."
+msgid_plural "%d products were removed from AskMerra."
+msgstr[0] "%d produit a été retiré d’AskMerra."
+msgstr[1] "%d produits ont été retirés d’AskMerra."
+
+#. translators: %d: number of products
+#: includes/Admin/StatusPage.php:730
+#, php-format
+msgid "Being prepared: it is published once the whole catalog is ready (%d product to go)."
+msgid_plural "Being prepared: it is published once the whole catalog is ready (%d products to go)."
+msgstr[0] "En préparation : il est publié dès que tout le catalogue est prêt (encore %d produit)."
+msgstr[1] "En préparation : il est publié dès que tout le catalogue est prêt (encore %d produits)."
+
+#: includes/Admin/SettingsPage.php:170
+msgid "How products are matched between WooCommerce and AskMerra. Product ID never changes; choose SKU only if your other AskMerra data already uses SKUs (a product without a SKU is sent as id: followed by its ID). Changing it later replaces the whole catalog in AskMerra."
+msgstr "Comment les produits sont mis en correspondance entre WooCommerce et AskMerra. L’ID produit ne change jamais ; choisissez l’UGS uniquement si vos autres données AskMerra utilisent déjà les UGS (un produit sans UGS est envoyé sous la forme id: suivi de son ID). Le changer plus tard remplace tout le catalogue dans AskMerra."
+
+#. translators: %d: number of products
+#: includes/Admin/StatusPage.php:182
+#, php-format
+msgid "Nothing could be sent right now: AskMerra asked to wait, did not answer or refused the key. %d product waits and is sent automatically; the latest errors are listed below."
+msgid_plural "Nothing could be sent right now: AskMerra asked to wait, did not answer or refused the key. %d products wait and are sent automatically; the latest errors are listed below."
+msgstr[0] "Rien n’a pu être envoyé pour le moment : AskMerra a demandé d’attendre, n’a pas répondu ou a refusé la clé. %d produit attend et sera envoyé automatiquement ; les dernières erreurs sont listées ci-dessous."
+msgstr[1] "Rien n’a pu être envoyé pour le moment : AskMerra a demandé d’attendre, n’a pas répondu ou a refusé la clé. %d produits attendent et seront envoyés automatiquement ; les dernières erreurs sont listées ci-dessous."
+
+#. translators: %s: language code, e.g. "fr"
+#: includes/Catalog/ProductBuilder.php:415
+#, php-format
+msgid "A translation (language %s): only the products of the default language are sent."
+msgstr "Une traduction (langue %s) : seuls les produits de la langue par défaut sont envoyés."
+
+#. translators: 1: product id, 2: id of the product with the same identifier, 3: the identifier (SKU)
+#: includes/Sync/QueueProcessor.php:413
+#, php-format
+msgid "Product %1$d has the same SKU as product %2$d (%3$s); AskMerra needs unique product identifiers."
+msgstr "Le produit %1$d a la même UGS que le produit %2$d (%3$s) ; AskMerra a besoin d’identifiants de produit uniques."
+
+#. translators: %s: the error, with the size
+#: includes/Sync/QueueProcessor.php:527
+#, php-format
+msgid "The product is too large to send to AskMerra; shorten its description or attributes. %s"
+msgstr "Le produit est trop volumineux pour être envoyé à AskMerra ; raccourcissez sa description ou ses attributs. %s"
+
+#. translators: %s: AskMerra's message
+#: includes/Sync/QueueProcessor.php:553
+#, php-format
+msgid "AskMerra rejected the product: %s"
+msgstr "AskMerra a refusé le produit : %s"
+
+#: includes/Sync/Remover.php:42
+msgid "Nothing was removed: AskMerra removes products only with the secret key. Enter it under WooCommerce > Settings > AskMerra > Connection (AskMerra can stay turned off), then try again."
+msgstr "Rien n’a été retiré : AskMerra retire les produits uniquement avec la clé secrète. Saisissez-la dans WooCommerce > Réglages > AskMerra > Connexion (AskMerra peut rester désactivé), puis réessayez."
