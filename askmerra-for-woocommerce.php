@@ -3,7 +3,7 @@
  * Plugin Name:          AskMerra for WooCommerce
  * Plugin URI:           https://askmerra.com
  * Description:          The AskMerra AI shopping assistant for WooCommerce: catalog sync through the Push API or a product feed, the chat widget, add to cart from the chat and sales attribution.
- * Version:              1.0.0
+ * Version:              1.0.1
  * Requires at least:    6.3
  * Requires PHP:         8.1
  * Requires Plugins:     woocommerce
@@ -19,7 +19,7 @@
 
 defined('ABSPATH') || exit;
 
-define('ASKMERRA_WC_VERSION', '1.0.0');
+define('ASKMERRA_WC_VERSION', '1.0.1');
 define('ASKMERRA_WC_FILE', __FILE__);
 define('ASKMERRA_WC_DIR', plugin_dir_path(__FILE__));
 define('ASKMERRA_WC_URL', plugin_dir_url(__FILE__));

@@ -185,7 +185,7 @@
             result = result || {};
 
             if (result.success) {
-                refreshCart(result, { externalId: externalId, sku: sku, name: result.name, qty: result.qty });
+                refreshCart(result, { externalId: externalId, sku: sku, name: result.name, cartQty: result.qty });
 
                 if (config.afterAdd === 'cart' && result.cartUrl) {
                     return open(result.cartUrl);

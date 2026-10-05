@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1 - 2026-10-05
+
+- The `askmerra:cart-added` event's detail carries `cartQty` (the items in the cart after the add)
+  instead of the misleading `qty`; documented in the README.
+
 ## 1.0.0 - 2026-10-05
 
 First release, with the features of AskMerra for Magento 2 1.0.0.

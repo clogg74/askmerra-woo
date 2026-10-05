@@ -249,7 +249,8 @@ unless asked for; other checkout pages can be marked with the `askmerra_is_check
   their page.
   - The mini cart refreshes: classic cart fragments (`added_to_cart`) and the Mini-Cart block
     (`wc-blocks_added_to_cart`).
-  - `document` receives an `askmerra:cart-added` event for themes that open a cart drawer.
+  - `document` receives an `askmerra:cart-added` event for themes that open a cart drawer, with
+    `detail: {externalId, sku, name, cartQty}` (`cartQty`: the items in the cart after the add).
 - **Orders** - on the order received page the order is passed to `AskMerra.trackPurchase()` once.
   AskMerra sends it once the shopper's analytics consent allows it.
 - **Consent** - *WP Consent API* mode reads the `statistics` category from consent plugins that
